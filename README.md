@@ -9,7 +9,7 @@
 
 # Admin Login page
 
-![alt text](https://github.com/AjayYadavAi/add-to-cart-project/blob/main/checkout.png?raw=true)
+![alt text](https://github.com/AjayYadavAi/add-to-cart-project/blob/master/checkout.png?raw=true)
 
 
 
