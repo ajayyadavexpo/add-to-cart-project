@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\shoppingcart;
+use App\Http\Controllers\PaypalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,8 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::get('/shoppingcart',Shoppingcart::class)->name('shoppingcart');
+
+Route::get('payment-cancel',[PaypalController::class,'cancel'])
+    ->name('payment.cancel');
+Route::get('payment-success',[PaypalController::class,'success'])
+    ->name('payment.success');

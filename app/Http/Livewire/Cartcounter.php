@@ -18,6 +18,8 @@ class Cartcounter extends Component
         return view('livewire.cartcounter');
     }
     public function getCartItemCount(){
-        $this->total = shoppingcart::whereUserId(auth()->user()->id)->count();
+        $this->total = shoppingcart::whereUserId(auth()->user()->id)
+            ->where('status', '!=', shoppingcart::STATUS['success'])
+            ->count();
     }
 }
